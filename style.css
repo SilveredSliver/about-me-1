@@ -1,0 +1,54 @@
+html {
+  height: 100%;
+}
+
+body {
+  background: darkgreen;
+  text-align: center;
+}
+
+header h1 {
+  display: inline;
+  color: blue;
+}
+
+header h1 a {
+  color: blue;
+}
+
+nav ul {
+  display: inline;
+  padding: 10px;
+  margin: 10px;
+}
+
+nav ul li {
+  background: black;
+  color: white;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+}
+
+nav ul li a {
+  color: white;
+}
+
+h1 {
+  color: black;
+}
+
+header {
+  background: rgba(75, 6, 21, .75);
+}
+
+footer {
+  background: rgba(75, 6, 21, .75);
+  padding-top: 0;
+  margin: 0;
+  postion: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
