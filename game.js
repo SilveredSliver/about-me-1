@@ -99,6 +99,7 @@ while(guessesLeft > 0){
     }else if(ans.toLowerCase() === states[5].toLowerCase()){
       alert("That's right! I've never even been to NY before.");
       guessesLeft = 0;
+      i = 7;
       score++;
     }else {
       alert("If you aren't going to take this serious the game is over.");
