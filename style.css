@@ -81,7 +81,7 @@ span {
 
 .content {
   float: left;
-  position: static;
+  position: relative;
   height: auto;
   background-color: rgba(0, 5, 3, .8);
   color: white;
@@ -90,7 +90,6 @@ span {
   margin-bottom: 3%;
   margin-left: 5%;
   margin-right: 5%;
-  height: auto;
   width: 88%;
   border-radius: 10px;
   border-style: groove;
@@ -104,8 +103,7 @@ footer {
   background: rgb(75, 6, 21);
   padding-top: 0;
   margin: 0;
-  clear: both;
-  postion: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
   left: 0;

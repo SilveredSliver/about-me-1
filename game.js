@@ -1,8 +1,10 @@
 'use strict';
 
+// Intro and name grab
 var score = 0;
-var yourName = prompt('What is your name?');
+var yourName = prompt('Finally, the game begins. What is your name?');
 
+// Question 1
 var payAttention = prompt('Did you pay attention?');
 if(payAttention.toLowerCase() === 'yes' || payAttention.toLowerCase() === 'y'){
   alert('Great job!');
@@ -12,15 +14,17 @@ if(payAttention.toLowerCase() === 'yes' || payAttention.toLowerCase() === 'y'){
 }
 console.log('When asked if the user was paying attention, the user responded with ' + payAttention);
 
+// Question 2
 var homeTown = prompt('Is my birthplace Seattle, WA?');
 if(homeTown.toLowerCase() === 'no' || homeTown.toLowerCase() ===  'n'){
-  alert('Correct! I was born in Billings, MT.');
+  alert('Correct! I was actually born in Billings, MT.');
   score++;
 } else {
   alert('Incorrect. Do better.');
 }
 console.log('When asked where I was born, the user responded ' + homeTown + '.');
 
+// Question 3
 var schoolName = prompt('Did I go to Idaho State University?');
 if(schoolName.toLowerCase() === 'yes' || schoolName.toLowerCase() ===  'y'){
   alert(schoolName + '. You are right. GO BENGALS!!!');
@@ -30,6 +34,7 @@ if(schoolName.toLowerCase() === 'yes' || schoolName.toLowerCase() ===  'y'){
 }
 console.log('When asked if I attended Idaho State University, the user responded with ' + schoolName + '.');
 
+// Question 4
 var downTime = prompt('Is watching sports one of my listed hobbies?');
 if(downTime.toLowerCase() === 'no' || downTime.toLowerCase() === 'n'){
   alert("That's right, I don't watch sports.");
@@ -39,6 +44,7 @@ if(downTime.toLowerCase() === 'no' || downTime.toLowerCase() === 'n'){
 }
 console.log('When asked if I watch sports as one of my hobbies the user put ' + downTime + '.');
 
+// Question 5
 var toBe = prompt('Do you want to be Awesome?!');
 if(toBe.toLowerCase() === 'yes' || toBe.toLowerCase() === 'y'){
   alert(toBe + ". That's the right answer!");
@@ -48,12 +54,13 @@ if(toBe.toLowerCase() === 'yes' || toBe.toLowerCase() === 'y'){
 }
 console.log('When asked if the user wants to be awesome, the user responded ' + toBe + '.');
 
+// Question 6
  var myAge;
  var number = 26
  var tries = 4;
 
  while(tries>0){
-   myAge = parseInt(prompt('How old do you think I am?'));
+   myAge = parseInt(prompt('How old do you think I am? You get 4 attempts to answer correctly.'));
    if(myAge<number){
      alert('Try again you. I am older than that.');
      tries--;
@@ -65,38 +72,39 @@ console.log('When asked if the user wants to be awesome, the user responded ' + 
      tries = 0;
      score++;
    }else {
-     alert('Incorrect. What are you doing?');
-     alert("I'm actually 26.");
+     alert('Incorrect. What are you doing? Try again.');
      tries--;
    }
  }
  console.log('When asked how old I am, the user responded with ' + myAge + '.');
 
-var states = ['WA', 'ID', 'MT', 'CA', 'OH', 'NY', 'IL'];
+// Question 7
+var states = ['Washington', 'Idaho', 'Montana', 'California', 'Ohio', 'New York', 'Illinois'];
+var stateAbbr = ['WA', 'ID', 'MT', 'CA', 'OH', 'NY', 'IL'];
 var guessesLeft = 6;
 
 while(guessesLeft > 0){
   for(var i = 0; i < states.length; i++){
     var ans = prompt('Which state have I not lived in out of WA, ID, MT, CA, OH, IL, and NY?');
-    if(ans.toLowerCase() === states[0].toLowerCase()){
+    if(ans.toLowerCase() === states[0].toLowerCase() || ans.toLowerCase() === stateAbbr[0].toLowerCase()){
       alert("Wrong. I've lived there before. Try again.");
       guessesLeft--;
-    }else if(ans.toLowerCase() === states[1].toLowerCase()){
+    }else if(ans.toLowerCase() === states[1].toLowerCase() || ans.toLowerCase() === stateAbbr[1].toLowerCase()){
       alert("Wrong. I've lived there before. Try again.");
       guessesLeft--;
-    }else if(ans.toLowerCase() === states[2].toLowerCase()){
+    }else if(ans.toLowerCase() === states[2].toLowerCase() || ans.toLowerCase() === stateAbbr[2].toLowerCase()){
       alert("Wrong. I've lived there before. Try again.");
       guessesLeft--;
-    }else if(ans.toLowerCase() === states[3].toLowerCase()){
+    }else if(ans.toLowerCase() === states[3].toLowerCase() || ans.toLowerCase() === stateAbbr[3].toLowerCase()){
       alert("Wrong. I've lived there before. Try again.");
       guessesLeft--;
-    }else if(ans.toLowerCase() === states[4].toLowerCase()){
+    }else if(ans.toLowerCase() === states[4].toLowerCase() || ans.toLowerCase() === stateAbbr[4].toLowerCase()){
       alert("Wrong. I've lived there before. Try again.");
       guessesLeft--;
-    }else if(ans.toLowerCase() === states[6].toLowerCase()){
+    }else if(ans.toLowerCase() === states[6].toLowerCase() || ans.toLowerCase() === stateAbbr[6].toLowerCase()){
       alert("Wrong. I've lived there before. Try again.");
       guessesLeft--;
-    }else if(ans.toLowerCase() === states[5].toLowerCase()){
+    }else if(ans.toLowerCase() === states[5].toLowerCase() || ans.toLowerCase() === stateAbbr[5].toLowerCase()){
       alert("That's right! I've never even been to NY before.");
       guessesLeft = 0;
       i = 7;
@@ -104,6 +112,7 @@ while(guessesLeft > 0){
     }else {
       alert("If you aren't going to take this serious the game is over.");
       guessesLeft = 0;
+      i = 7
     }
   }
 }
