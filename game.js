@@ -2,9 +2,10 @@
 
 // Intro and name grab
 var score = 0;
-var yourName = prompt('Finally, the game begins. What is your name?');
+var yourName = prompt('Let the game begins. What is your name?');
 
 // Question 1
+function questionOne() {
 var payAttention = prompt('Did you pay attention?');
 if(payAttention.toLowerCase() === 'yes' || payAttention.toLowerCase() === 'y'){
   alert('Great job!');
@@ -13,8 +14,11 @@ if(payAttention.toLowerCase() === 'yes' || payAttention.toLowerCase() === 'y'){
   alert('Really? ' + payAttention + ' .Ok...');
 }
 console.log('When asked if the user was paying attention, the user responded with ' + payAttention);
+}
+questionOne();
 
 // Question 2
+function questionTwo() {
 var homeTown = prompt('Is my birthplace Seattle, WA?');
 if(homeTown.toLowerCase() === 'no' || homeTown.toLowerCase() ===  'n'){
   alert('Correct! I was actually born in Billings, MT.');
@@ -23,8 +27,11 @@ if(homeTown.toLowerCase() === 'no' || homeTown.toLowerCase() ===  'n'){
   alert('Incorrect. Do better.');
 }
 console.log('When asked where I was born, the user responded ' + homeTown + '.');
+}
+questionTwo();
 
 // Question 3
+function questionThree() {
 var schoolName = prompt('Did I go to Idaho State University?');
 if(schoolName.toLowerCase() === 'yes' || schoolName.toLowerCase() ===  'y'){
   alert(schoolName + '. You are right. GO BENGALS!!!');
@@ -33,8 +40,11 @@ if(schoolName.toLowerCase() === 'yes' || schoolName.toLowerCase() ===  'y'){
   alert('Wrong. ' + schoolName + ' is incorrect.');
 }
 console.log('When asked if I attended Idaho State University, the user responded with ' + schoolName + '.');
+}
+questionThree();
 
 // Question 4
+function questionFour() {
 var downTime = prompt('Is watching sports one of my listed hobbies?');
 if(downTime.toLowerCase() === 'no' || downTime.toLowerCase() === 'n'){
   alert("That's right, I don't watch sports.");
@@ -43,8 +53,11 @@ if(downTime.toLowerCase() === 'no' || downTime.toLowerCase() === 'n'){
   alert("That's wrong, you put " + downTime + ", but I don't watch sports.");
 }
 console.log('When asked if I watch sports as one of my hobbies the user put ' + downTime + '.');
+}
+questionFour();
 
 // Question 5
+function questionFive() {
 var toBe = prompt('Do you want to be Awesome?!');
 if(toBe.toLowerCase() === 'yes' || toBe.toLowerCase() === 'y'){
   alert(toBe + ". That's the right answer!");
@@ -53,8 +66,11 @@ if(toBe.toLowerCase() === 'yes' || toBe.toLowerCase() === 'y'){
   alert(toBe + ". FAIL!");
 }
 console.log('When asked if the user wants to be awesome, the user responded ' + toBe + '.');
+}
+questionFive();
 
 // Question 6
+function questionSix() {
  var myAge;
  var number = 26
  var tries = 4;
@@ -77,8 +93,11 @@ console.log('When asked if the user wants to be awesome, the user responded ' + 
    }
  }
  console.log('When asked how old I am, the user responded with ' + myAge + '.');
+}
+questionSix();
 
 // Question 7
+function questionSeven() {
 var states = ['Washington', 'Idaho', 'Montana', 'California', 'Ohio', 'New York', 'Illinois'];
 var stateAbbr = ['WA', 'ID', 'MT', 'CA', 'OH', 'NY', 'IL'];
 var guessesLeft = 6;
@@ -101,10 +120,10 @@ while(guessesLeft > 0){
     }else if(ans.toLowerCase() === states[4].toLowerCase() || ans.toLowerCase() === stateAbbr[4].toLowerCase()){
       alert("Wrong. I've lived there before. Try again.");
       guessesLeft--;
-    }else if(ans.toLowerCase() === states[6].toLowerCase() || ans.toLowerCase() === stateAbbr[6].toLowerCase()){
+    }else if(ans.toLowerCase() === states[6].toLowerCase() || ans.toLowerCase() === stateAbbr[6].toLowerCase()) {
       alert("Wrong. I've lived there before. Try again.");
       guessesLeft--;
-    }else if(ans.toLowerCase() === states[5].toLowerCase() || ans.toLowerCase() === stateAbbr[5].toLowerCase()){
+    }else if(ans.toLowerCase() === states[5].toLowerCase() || ans.toLowerCase() === stateAbbr[5].toLowerCase() || ans.toLowerCase() === 'newyork'){
       alert("That's right! I've never even been to NY before.");
       guessesLeft = 0;
       i = 7;
@@ -116,6 +135,8 @@ while(guessesLeft > 0){
     }
   }
 }
+}
+questionSeven();
 
     alert('That concludes this game ' + yourName + '. You got ' + score + ' out of 7. Come back later to try again!');
 
